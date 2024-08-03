@@ -35,6 +35,57 @@ function ButtonSection() {
   )
 }
 
+function CreateButton(props) {
+  return (
+    <div className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer'>
+      <button onClick={() => { props.callback('create') }}>Create</button>
+    </div>
+  )
+}
+
+function DeleteButton(props) {
+  return (
+    <div className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded cursor-pointer'>
+      <button onClick={() => { props.callback('delete') }}>Delete</button>
+    </div>
+  )
+}
+
+function UpdateButton(props) {
+  return (
+    <div className='bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded cursor-pointer'>
+      <button onClick={() => { props.callback('update') }}>Update</button>
+    </div>
+  )
+}
+
+/*
+Task 2:
+
+Improve this code so we can add more cards using a data array like
+[
+    {
+      title: "Card Title 1",
+      subtitle: "Card subtitle 1",
+      image: "https://via.placeholder.com/400x200",
+      description: "Description for card 1."
+    },
+    {
+      title: "Card Title 2",
+      subtitle: "Card subtitle 2",
+      image: "https://via.placeholder.com/400x200",
+      description: "Description for card 2."
+    },
+    {
+      title: "Card Title 3",
+      subtitle: "Card subtitle 3",
+      image: "https://via.placeholder.com/400x200",
+          description: "Description for card 3."
+    }
+  ];
+
+*/
+
 function CardSection() {
   return (
     <>
@@ -117,30 +168,6 @@ function CardSection() {
   )
 }
 
-
-function CreateButton(props) {
-  return (
-    <div className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer'>
-      <button onClick={() => { props.callback('create') }}>Create</button>
-    </div>
-  )
-}
-
-function DeleteButton(props) {
-  return (
-    <div className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded cursor-pointer'>
-      <button onClick={() => { props.callback('delete') }}>Delete</button>
-    </div>
-  )
-}
-
-function UpdateButton(props) {
-  return (
-    <div className='bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded cursor-pointer'>
-      <button onClick={() => { props.callback('update') }}>Update</button>
-    </div>
-  )
-}
 
 
 export default App
